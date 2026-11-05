@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable name="valveAext" type="BOOL" initial="0"/>
+    <variable name="valveBext" type="BOOL" initial="0"/>
+    <variable name="valveCext" type="BOOL" initial="0"/>
+    <variable name="heaterExt" type="BOOL" initial="0"/>
+    <variable name="level" type="INT" initial="0"/>
+    <variable name="temp" type="INT" initial="30"/>
+  </variables>
+  <sketch>
+    <xhtml:p><![CDATA[
+void sketch_setup()
+{
+
+}
+
+void sketch_loop()
+{
+    if(valveBext==1)
+        level+=1;
+
+    if(heaterExt==1)
+
+        temp+=1;
+
+    if(valveCext==1){
+
+        level-=1;
+
+        while(temp>30)
+
+            temp-=1;
+
+    }
+}
+]]></xhtml:p>
+  </sketch>
+</CFile>
