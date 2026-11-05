@@ -853,6 +853,31 @@ button {
   background: radial-gradient(ellipse at 52% 52%, #102c3a, #081721 72%);
 }
 
+.project-visual--cover {
+  background:
+    linear-gradient(rgba(89, 160, 179, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(89, 160, 179, 0.035) 1px, transparent 1px),
+    #0b1926;
+  background-size: 24px 24px;
+}
+
+.project-visual__cover-image {
+  display: block;
+  width: 100%;
+  height: 188px;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 240ms ease;
+}
+
+.project-visual__cover-image[data-fit="cover"] {
+  object-fit: cover;
+}
+
+.project-card:hover .project-visual__cover-image {
+  transform: scale(1.025);
+}
+
 .project-visual__layout-image {
   display: block;
   width: 100%;
@@ -1405,6 +1430,10 @@ button {
   width: min(100%, 920px);
   height: 380px;
   object-fit: contain;
+}
+
+.project-detail__visual .project-visual__cover-image {
+  height: 380px;
 }
 
 .project-detail__visual .project-visual--decoder,
@@ -2254,6 +2283,10 @@ button {
     height: 300px;
   }
 
+  .project-detail__visual .project-visual__cover-image {
+    height: 300px;
+  }
+
   .project-detail__content {
     grid-template-columns: 1fr;
     gap: 35px;
@@ -2453,6 +2486,10 @@ button {
   }
 
   .project-detail__visual .project-visual__layout-image {
+    height: 250px;
+  }
+
+  .project-detail__visual .project-visual__cover-image {
     height: 250px;
   }
 

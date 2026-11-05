@@ -7,17 +7,20 @@ type ProjectArtworkProps = {
 
 export function ProjectArtwork({ project }: ProjectArtworkProps) {
   if (project.cover) {
+    const isLayout = project.cover.treatment === "layout";
+
     return (
-      <div className="project-visual project-visual--layout">
+      <div className={`project-visual ${isLayout ? "project-visual--layout" : "project-visual--cover"}`}>
         <Image
           src={project.cover.src}
           alt={project.cover.alt}
-          width={1248}
-          height={1024}
-          className="project-visual__layout-image"
+          fill
+          sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw"
+          data-fit={project.cover.fit ?? "contain"}
+          className={isLayout ? "project-visual__layout-image" : "project-visual__cover-image"}
         />
         <span className="project-visual__corner-label" aria-hidden="true">
-          PHYSICAL LAYOUT / CADENCE
+          {project.cover.label}
         </span>
       </div>
     );

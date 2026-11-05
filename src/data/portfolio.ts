@@ -19,6 +19,9 @@ export type PortfolioProject = {
   cover?: {
     src: string;
     alt: string;
+    label: string;
+    fit?: "cover" | "contain";
+    treatment?: "layout";
   };
   featured?: boolean;
 };
@@ -111,6 +114,9 @@ export const projects: PortfolioProject[] = [
     cover: {
       src: "/project-art/instrumentation-amplifier-layout.png",
       alt: "Layered physical layout view from the instrumentation-amplifier project.",
+      label: "PHYSICAL LAYOUT / CADENCE",
+      fit: "contain",
+      treatment: "layout",
     },
     featured: true,
   },
@@ -129,6 +135,12 @@ export const projects: PortfolioProject[] = [
       "Report material covering GDSII creation.",
     ],
     artwork: "decoder",
+    cover: {
+      src: "/project-art/bcd-seven-segment-decoder.jpg",
+      alt: "Physical layout view from the BCD-to-seven-segment decoder project.",
+      label: "GDSII / PHYSICAL DESIGN",
+      fit: "contain",
+    },
     featured: true,
   },
   {
@@ -146,6 +158,12 @@ export const projects: PortfolioProject[] = [
       "Generated project build artifacts.",
     ],
     artwork: "automation",
+    cover: {
+      src: "/project-art/plc-liquid-mixing-control.svg",
+      alt: "Illustration of a liquid mixing and heating system controlled by a PLC.",
+      label: "PROCESS OVERVIEW / PLC",
+      fit: "contain",
+    },
     featured: true,
   },
   {
@@ -163,6 +181,12 @@ export const projects: PortfolioProject[] = [
       "PDF plot exports and drill outputs.",
     ],
     artwork: "pcb",
+    cover: {
+      src: "/project-art/function-generator-pcb.png",
+      alt: "KiCad PCB layout for the function-generator project.",
+      label: "PCB LAYOUT / KICAD",
+      fit: "contain",
+    },
   },
   {
     slug: "wazap-footstep-energy-harvesting",
@@ -178,6 +202,12 @@ export const projects: PortfolioProject[] = [
       "Two rendered views of the assembly concept.",
     ],
     artwork: "harvesting",
+    cover: {
+      src: "/project-art/wazap-platform.png",
+      alt: "CAD render of the spring-supported WaZap footstep energy-harvesting platform.",
+      label: "CAD ASSEMBLY / WAZAP",
+      fit: "contain",
+    },
   },
   {
     slug: "webots-reinforce-navigation",
@@ -194,6 +224,12 @@ export const projects: PortfolioProject[] = [
       "A report describing the environment, actions, and reward design.",
     ],
     artwork: "robot",
+    cover: {
+      src: "/project-art/webots-navigation.png",
+      alt: "Webots simulation view used in the robot-navigation project.",
+      label: "SIMULATION / WEBOTS",
+      fit: "contain",
+    },
   },
   {
     slug: "mountain-car-control-simulation",
@@ -210,6 +246,12 @@ export const projects: PortfolioProject[] = [
       "A Matplotlib animation of the simulation.",
     ],
     artwork: "control",
+    cover: {
+      src: "/project-art/mountain-car-robust-tracking.png",
+      alt: "Mountain-car position plot from the robust tracking simulation.",
+      label: "ROBUST TRACKING / SIMULATION",
+      fit: "contain",
+    },
   },
 ];
 
