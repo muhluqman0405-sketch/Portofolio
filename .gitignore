@@ -1,0 +1,45 @@
+# Dependencies and generated output
+node_modules/
+.next/
+out/
+build/
+dist/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# Local configuration
+.env*
+!.env.example
+.vercel/
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+secrets.*
+
+# Local Python environments and generated files in archived project workspaces
+**/.venv/
+**/venv/
+**/__pycache__/
+*.py[cod]
+*.rar
+
+# Engineering source workspaces are not inputs to the portfolio website build.
+# Their project summaries and web-ready images are maintained in src/ and public/.
+/Design and Implementation of PLC-Based Automatic Liquid Mixing and Heating Control System/
+/Function Generator/
+/Instrumentation Amplifier Cadence/
+/PSKM Project/
+/RTL-to-GDSII Design of a BCD-to-Seven-Segment Decoder/
+/WaZap (Walk n Zap) Harvesting Footstep Vibrations to Generate Electricity in Train Stations/
+/Webots Reinforcement Learning/
+/profile image.jpeg
+
+# Editor and operating system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
